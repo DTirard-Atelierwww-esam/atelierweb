@@ -1,0 +1,63 @@
+/* 
+   css slider - décembre 2022
+*/
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.visio {
+   display: flex;
+   position: absolute;
+   top: 200px;
+   /* left: 500px; */
+   align-items: center;
+   width: 100vw;
+   justify-content: center;
+}
+
+.before, .after {
+   font-size: 30px;
+   opacity: 1;
+}
+
+.before:hover, .after:hover {
+   cursor: pointer;
+}
+
+.fenetre {
+   width: 200px;
+   /* height: 200px; */
+   overflow: hidden;
+   border: 23px solid red;
+   padding: 5px;
+}
+
+.galerie ul {
+   display: flex;
+   list-style: none;
+   position: relative;
+}
+
+.galerie ul li img {
+   width: 200px;
+}
+
+.flecheArr {
+   position: absolute;
+   left: 0px;
+   width: 50vw;
+   height: 200px;
+   cursor: url(../../imagesContenu/flecheG.svg),auto;
+   z-index: 1000;
+}
+
+.flecheAv {
+   position: absolute;
+   right: 0px;
+   width: 50vw;
+   height: 200px;
+   cursor: url(../../imagesContenu/flecheD.svg),auto;
+   z-index: 1000;
+}
