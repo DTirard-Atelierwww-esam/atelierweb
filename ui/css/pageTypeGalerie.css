@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75,700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Open Sans', sans-serif;
+}
+
+header {
+   display: flex;
+   background-color: rgb(0 0 0);
+   align-items: center;
+   font-family: 'Open Sans', sans-serif;
+}
+
+header h1 {
+   background: url('../imagesHabillage/monogramme.png') no-repeat 0 0;
+   width: 244px;
+   height: calc(376px/2);
+   /* margin: 14px; */
+}
+
+header h1:hover {
+   background-position-y: -188px;
+}
+
+header nav ul {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   list-style-type: none;
+   padding-left: 64px;
+}
+
+header nav ul a {
+    color: rgb(255 255 255);
+    text-decoration: none;
+    font-size: 118px;
+}
+
+header nav ul a:hover {
+   color: rgb(0 255 0);
+}
+
+header nav ul li {
+   margin-right: 37px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   line-height: 53px;
+}
+
+p span {
+  color: rgb(0 0 0);
+}
+
+main {
+   color: rgb(131 131 131);
+}
+
+main section.presentation {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Open Sans',sans-serif;
+   background-color: rgb(240 240 240);
+   margin-bottom: 20px;
+}
+
+main section.presentation .colLeft {
+   width: 499px;
+   font-size: 14px;
+}
+
+main section.presentation .colRight {
+   width: 548px;
+   font-size: 40px;
+}
+
+main section.images {
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-start;
+}
+
+main section.images div.ima {
+   border-top: 1px solid rgb(0 0 0);
+   padding-top: 10px;
+}
+
+main section.images .ima figure {
+
+}
+
+main section.images .ima figure img {
+   width: 216px;
+   filter: saturate(0.3);
+   transition: all 0.7s ease-in-out;
+}
+
+main section.images .ima figure img:hover {
+   filter: saturate(1);
+}
+
+main section.images .ima figure figcaption {
+   font-size: 12px;
+   line-height: 17px;
+   width: 216px;
+}
+
+main section.images .ima figure figcaption p span {
+   font-size: 17px;
+}
+
+.zoom {
+   overflow: hidden;
+   width: 216px;
+
+}
+
+.zoom img {
+   transform: scale(1);
+}
+
+div.zoom img:hover {
+   transform: scale(1.5);
+}
