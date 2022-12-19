@@ -1,0 +1,138 @@
+/*
+   feuille de styles - responsive Design
+   @author Didier Tirard - dec 2021
+ */
+
+@font-face {
+   font-family: "Roboto-Black";
+   src: url("../fonts/Roboto-Black.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: "Roboto-Regular";
+   src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-family: "Roboto-Regular";
+}
+
+header {
+   font-family: "Roboto-black";
+   color: rgb(255 255 255);
+   background-color: rgb(153 51 204);
+   padding: 1vw;
+}
+
+main {
+   display: flex;
+   /* responsive */
+      flex-direction: column;
+}
+
+nav {
+   width: 25vw; /* !responsive */
+   margin-left: 1vw;
+}
+
+nav ul {
+   list-style-type: none;
+}
+
+nav ul li {
+   color: rgb(255 255 255);
+   background-color: rgb(51 181 229);
+   padding: 0.5vw;
+   margin: 0.5vw;
+}
+
+section {
+   width: 50vw; /* !responsive */
+   min-height: 50vh;
+   padding: 1.5vw;
+   /*cursor:url(../cursor/myCursor.png), auto;*/
+}
+
+aside {
+   width: 25vw; /* !responsive */
+   color: rgb(255 255 255);
+   background-color: rgb(51 181 229);
+   padding: 1vw;
+   margin-top: 1vw;
+}
+
+aside h2 {
+   text-align: center;
+   margin: 1vw 0 1vw 0;
+}
+
+footer {
+   position: absolute;
+   text-align: center;
+   color: rgb(255 255 255);
+   background-color: rgb(51 181 229);
+   padding: 1vw;
+   margin-top: 1vw;
+   bottom: 0px;
+   width: 98vw;
+}
+
+.bottomFooter {
+   position: relative;
+   width: auto;
+}
+
+/* ---------------------- RESPONSIVE DESIGN ---------------------- */
+   /* smartPhone FIRST ----------- */
+      main>* {
+         flex-direction: column;
+         width: 100vw;
+      }
+
+      /* .responsive {
+         position: relative;
+         width: auto;
+      } */
+
+   /* Pour tablettes */
+    @media (min-width: 768px) and (max-width: 959px)
+     {
+       main {
+         flex-direction: row;
+         flex-wrap: wrap;
+       }
+       nav {
+         width: 25vw;
+       }
+       section {
+         width: 65vw;
+       }
+       aside {
+         width: 100vw;
+       }
+       footer {
+         width: 100vw;
+       }
+     }
+
+   /* Ordinateur */
+     @media (min-width: 960px)
+      {
+        main {
+          flex-direction: row;
+        }
+        nav {
+          width: 25vw;
+        }
+        section {
+          width: 50vw;
+        }
+        aside {
+          width: 25vw;
+        }
+      }
