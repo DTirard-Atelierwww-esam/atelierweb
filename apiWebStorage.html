@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Web Storage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        /**
+         * enregistrer dans localStorage l'état de visite d'un menu 
+         * et afficher une alerte s'il a déjà été visité.
+         */
+
+        jQuery('document').ready(function($) {
+        
+            // localStorage.clear();
+
+            stocker(sessionStorage); // effacées à la fermeture de l'onglet
+            stocker(localStorage); // conservées
+           
+            function stocker(emplacement) {
+                $('li').each(function() {
+                    emplacement.setItem('menu_'+$(this).attr('choix')+'_visited',false); // initilaiser à faux tous les menus visités
+                })
+                $('li').on('click', function() {
+                    if(emplacement.getItem('menu_'+$(this).attr('choix')+'_visited') === 'true')
+                    {
+                        alert('déjà visité');
+                    } else {
+                        emplacement.setItem('menu_'+$(this).attr('choix')+'_visited',true);
+                    }
+                })
+            }
+
+        })
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+           <li choix="1">choix 1</li>
+           <li choix="2">choix 2</li>
+           <li choix="3">choix 3</li>
+        </ul>
+    </nav>
+</body>
+</html>
