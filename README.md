@@ -10,3 +10,5 @@
 > - ui/css/responsive.css
 - gestion de cookies (html / js-jQuery)
 > - gestionCookies.html
+- api web storage (html / js-jQuery)
+> - apiWebStorage.html
