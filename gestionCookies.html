@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   </head>
+   <body>
+      <p></p>
+      <script type="text/javascript">
+         /**
+          * @author Didier Tirard
+          * @version 1.0 - décembre 2022
+          */
+
+         // création de la date d'expiration date + 1 jours
+         var date = new Date(Date.now() + 86400000); //86400000ms = 1 jour
+         date = date.toUTCString();
+         effacerCookie('firstName');
+         effacerCookie('lastName');
+         // création des cookies
+        
+         creerCookie('firstName','Didier');
+         creerCookie('lastName','Tirard');
+         
+         // création de l'affichage
+         let tab = document.cookie.split(';');
+         let firstName = tab[0].split('=')[1]; // récupérer la valeur de firstName
+         let lastName = tab[1].split('=')[1]; // récupérer la valeur de lastName
+         $('p').html(firstName+' '+lastName); // remplir la balise p
+     
+         /**
+          * Effacer un cookie 
+          * @function effacerCookies
+          * @param {string} key - clé du cookie
+          */
+         function effacerCookie(key) {
+            let origin = 'expires=Thu, 01 Jan 1970 00:00:00 UTC';
+            document.cookie = `${key}=;${origin}`;
+         }
+
+         /**
+          * Créer un cookie
+          * @function creerCookie
+          * @param {string} key - clé du cookie
+          * @param {string} value - valeur du cookie
+          */
+         function creerCookie(key, value) {
+            return document.cookie = `${key}=${value}; expires=${date};path=/`;
+         }
+      </script>
+   </body>
+</html>
