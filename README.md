@@ -1,6 +1,6 @@
 # atelierweb
 
-- exemple d'un slider (html / css /js)
+- exemple d'un slider (html / css / js-jQuery)
 > - slider.html
 > - imagesContenu/
 > - ui/css/slider.css
@@ -8,3 +8,5 @@
 - page responsive (html / css)
 > - responsive.html
 > - ui/css/responsive.css
+- gestion de cookies (html / js-jQuery)
+> - gestionCookies.html
