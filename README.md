@@ -1,5 +1,9 @@
 # atelierweb
 
+- exemple carrousel fondu enchaîné (html / css / js-jQuery)
+> - carrouselFadeFade.html
+> - ui/css/carrousel.css
+> - ui/js/carrousselFade.js
 - exemple d'un slider (html / css / js-jQuery)
 > - slider.html
 > - imagesContenu/
