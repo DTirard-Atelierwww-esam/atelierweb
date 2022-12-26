@@ -23,11 +23,16 @@
             function stocker(emplacement) {
                 $('li').each(function() {
                     emplacement.setItem('menu_'+$(this).attr('choix')+'_visited',false); // initilaiser à faux tous les menus visités
+                    $(this).css('cursor','pointer');
                 })
                 $('li').on('click', function() {
                     if(emplacement.getItem('menu_'+$(this).attr('choix')+'_visited') === 'true')
                     {
-                        alert('déjà visité');
+                        // alert('déjà visité');
+                        $(this).css({
+                            'color':'rgb(255 0 0',
+                        'font-weight':'bold'
+                        });
                     } else {
                         emplacement.setItem('menu_'+$(this).attr('choix')+'_visited',true);
                     }
