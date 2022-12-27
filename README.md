@@ -1,5 +1,6 @@
 # atelierweb
 
+*atelier web semestre 3*
 - exemple d'une page type galerie
 > - pageTypeGalerie.html
 > - imahesContenu/
