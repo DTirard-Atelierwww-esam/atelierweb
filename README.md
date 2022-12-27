@@ -1,5 +1,6 @@
 # atelierweb
 
+*atelier web dynamique semestre 5*
 - exemple carrousel fondu enchaîné (html / css / js-jQuery)
 > - carrouselFadeFade.html
 > - ui/css/carrousel.css
