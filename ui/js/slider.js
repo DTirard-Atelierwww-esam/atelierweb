@@ -4,7 +4,7 @@
   */
 
 var newPos = 0;
-var largeur = 600; // dimension des images affichées
+var largeur = 400; // dimension des images affichées
 var cycle = 0;
 
 
